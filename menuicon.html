@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.7.1.js"></script>
+    <script></script>
+
+    <style type="text/css">
+        .btn{
+            width: 50px;
+            height: 50px;
+            border :1px solid red;
+            position: relative;    
+        }
+
+        .btn span{
+            display: block;
+            width: 50px;
+            height: 5px;
+            background-color: transparent;
+            position: absolute;
+        }
+
+
+        .btn span.span1{
+            top: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn span.span1::before{
+            content: "";
+            float: left;
+            width: 40px;
+            height: 5px;
+            background-color: black;transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .btn span.span1::after{
+            content: "";
+            float: right;
+            width: 5px;
+            height: 5px;
+            background-color: black;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);}
+
+        .btn:hover span.span1::before{
+            width: 5px;
+
+        }
+        .btn:hover span.span1::after{
+            width: 40px;
+        }
+
+        .btn span.span2{
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .btn span.span2::before{
+            content: "";
+            float: left;
+            width: 5px;
+            height: 5px;
+            background-color: black;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .btn span.span2::after{
+            content: "";
+            float: right;
+            width: 40px;
+            height: 5px;
+            background-color: black;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .btn:hover span.span2::before{
+            width: 40px;
+        }
+        .btn:hover span.span2::after{
+            width: 5px;
+        }
+
+        .btn span.span3{
+            bottom: 0;
+        }
+        .btn span.span3::before{
+            content: "";
+            float: left;
+            width: 40px;
+            height: 5px;
+            background-color: black;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)
+        }
+        .btn span.span3::after{
+            content: "";
+            float: right;
+            width: 5px;
+            height: 5px;
+            background-color: black;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)
+            
+        }
+
+        .btn:hover span.span3::before{
+            width: 5px;
+            
+        }
+        .btn:hover span.span3::after{
+            width: 40px;
+        }
+
+        
+
+        .box_box{
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .box{
+            width: 200%;
+            height: 500px;
+            border-radius: 50%;
+            background-color: red;
+            transform: translateX(-25%);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <span class="span1"></span>
+        <span  class="span2"></span>
+        <span class="span3"></span>
+    </div>
+    
+
+    <!-- <div class="box_box">
+        <div class="box">4</div>
+    </div> -->
+</body>
+</html>

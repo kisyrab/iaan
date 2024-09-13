@@ -40,14 +40,16 @@ $(function(){
 
     
     // 서브메뉴 떨어트리기
-    $("header").hover(function(){
+    $(".main").hover(function(){
         $(".sub").stop().slideDown(200);
         $("header").stop().animate({height : "310px"} , 500)
         $("header h1 a").addClass("on")
+        $("header").addClass("bgON")
     }, function(){
         $(".sub").stop().slideUp(200);
         $("header").stop().animate({height : "100px"} , 800)
         $("header h1 a").removeClass("on")
+        $("header").removeClass("bgON")
     })
 
     // main이미지 fade
@@ -125,6 +127,21 @@ $(function(){
 
     })
 
+    //반응형일때 메뉴
 
+    ///hovermenu
+    $(".btn").click(function(){
+        $(".hoverMenu").animate({right : "0"} , 200)
+    })
+    $(".xButton").click(function(){
+        $(".hoverMenu").animate({right : "-300px"} , 200)
+    })
+
+    ///sub
+    $(".hoverMenuMain > li").hover(function(){
+        $(this).find(".hoverSub").stop().slideDown()
+    },function(){
+        $(this).find(".hoverSub").stop().slideUp()
+    })
 
 })//j

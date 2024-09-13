@@ -1,8 +1,107 @@
 @charset "utf-8";
 
 @media (max-width : 700px) {
-    
-}
+    header{padding: 0 20px;}
+    .main{display: none;}
+/* ////// */
+    .section01{background: url("../images/main01.jpg") no-repeat center;}
+    .video{display: none;}
+    .scrolldown{display: none;}
+    .section01_inner h2{font-size: 1.8rem; margin-bottom: 20px;}
+    .section01_inner p{width: 260px; margin: 0 auto; font-size: 0.8rem; padding: 0 50px;}
+    .section01_inner a{font-size: 0.9rem; margin: 50px auto;}
+/* ////// */
+    .section02_inner ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 60%;
+        margin: 80px auto;
+    }
+    .section02_inner ul li{text-align: center; margin: 0 auto;}
+/* ////// */
+    .portfolio_title{display: flex; flex-direction: column;}
+    .portfolio_title h2{ padding-left: 0px; margin-bottom: 50px; }
+    .portfolio_title ul li a{
+        font-size: 0.9rem;
+        width: 100px; height: 50px;
+        padding: 0;
+        line-height: 50px; text-align: center;
+    }
+    .p_tree_box{
+        flex-direction: column;
+        margin: 0 auto;
+        height:  200%;
+        justify-content: center !important;
+    }
+
+
+    .section03{height: 650px;}
+    .bluebox{
+        width: 90%; height: 300px; margin: 0 auto; float: none;
+        position: relative;
+    }
+    .bluebox *{width: 50%; margin: 0 auto;}
+    .portfolio_inner_text{
+        width: 90%; height: 300px; margin: 0 auto;
+        float: none;
+        position: absolute; top: 0; left: 33px;
+        background-color: #00000073;
+        color: #fff;
+    }
+    .portfolio_inner_text h3, .portfolio_inner_text h4, .portfolio_inner_text p{margin: 10px;}
+
+    .portfolio_inner_text .vertical_bar{
+        background-color: #fff;
+        margin: 10px; 
+    }
+
+    .portfolio_inner_text a{
+        position: absolute; top: 60%; right: 20px;
+        border: none;
+        width: 100px; height: 100px; line-height: 100px;
+        border-radius: 30%;
+    }
+    .portfolio_inner_text a:hover{
+        width: 100px; height: 100px;
+        border-radius: 50%;
+        /* border-bottom: 1px solid #fff; */
+        /* background: transparent; */
+    }
+
+
+    .section04{
+        flex-direction: column;
+    }
+    .sec4icon{display: none;}
+
+    .sec4box{
+        padding: 0 80px;
+        justify-content: space-between;
+        flex-direction: row;
+        border-bottom: 1px solid #dddddd31;
+    }
+
+    .sec4box h2, .sec4box p{padding: 0;}
+
+    .con_top{display: block;}
+    .con_top_left{
+        width: 500px;
+    }
+
+
+
+
+
+
+
+} 
+
+
+
+
+
+
 
 @media (max-width : 360px) {
     

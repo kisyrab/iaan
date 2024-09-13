@@ -1,26 +1,5 @@
 @charset "utf-8";
 
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-*{margin: 0; padding: 0; box-sizing: border-box;}
-ul, li{list-style: none;}
-a{text-decoration: none; color: inherit; display: block;}
-html,body{
-    height: 100%;
-}
-.blind{position: absolute; left: -9999px; font-size: 0;}
-
-body{
-    font-family: 'Pretendard-Regular';
-    color: #fff;
-    /* background-color: #ddd; */
-    overflow-x: hidden;
-}
-
 header{
     display: flex;
     justify-content: space-around;
@@ -32,9 +11,7 @@ header{
     /* border: 1px solid red; */
     cursor: pointer;
 }
-header:hover{
-    background-color: #ffffff67;
-}
+header.bgON{background-color: #00000067;}
 header h1{}
 header h1 a{
     background: url("../images/logo.svg") no-repeat center;
@@ -75,11 +52,7 @@ header nav{
     /* border: 1px solid red; */
     padding: 0 20px;
 }
-.main>li:hover>a{
-    /* color: #f93; */
-    color: #fff;
-}
-
+.main>li:hover>a{color: #fff;}
 
 .main>li>a:before{
     content: "";
@@ -92,10 +65,7 @@ header nav{
     background-color: #f93;
 }
 
-.main>li:hover>a:before{
-    transform: scale(1);
-}
-
+.main>li:hover>a:before{transform: scale(1);}
 
 .sub{
     position: absolute;
@@ -121,16 +91,6 @@ header nav{
     font-weight: 500;
 }
 
-/* .menu_bg{
-    width: 100vw; 
-    height: 210px;
-    background-color: #ffffff5b;
-    display: none;
-    position: absolute;
-    top: 100px; left: 0;
-    z-index: 199;
-} */
-
 #indicator
 {   /* display: none; */
     position: absolute;
@@ -143,14 +103,102 @@ header nav{
     border-radius: 5px;
     transition: 0.2s ease left;
     z-index: 300;
-    
 }
 
-.gnb{}
-.gnb a{width: 80%;}
-.gnb a img{width: 80%;}
-.gnb a:hover img{filter: hue-rotate(180deg);}
+.gnb{
+    /* border: 1px solid red; */
+    width: 100px; height: 100px; text-align: center;
+    display: flex; justify-content: space-between; align-items: center;
+    overflow: hidden;
 
+}
+.gnb a{}
+.gnb a svg{width: 30px; height: 30px; margin-top: 3px;}
+
+.btn{
+    width: 30px; 
+    height: 30px;
+    /* border :1px solid yellow; */
+    position: relative;    
+}
+
+.btn span{
+    display: block;
+    width: 30px; height: 3px;
+    background-color: transparent;
+    position: absolute;
+}
+
+.btn span.span1{top: 0; transition: all 0.3s ease-in-out;}
+
+.btn span.span1::before{
+    content: "";
+    float: left;
+    width: 20px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn span.span1::after{
+    content: "";
+    float: right;
+    width: 3px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);}
+
+.btn:hover span.span1::before{width: 3px;}
+.btn:hover span.span1::after{width: 20px;}
+.btn span.span2{top: 50%; transform: translateY(-50%);}
+.btn span.span2::before{
+    content: "";
+    float: left;
+    width: 3px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.btn span.span2::after{
+    content: "";
+    float: right;
+    width: 20px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn:hover span.span2::before{width: 20px;}
+.btn:hover span.span2::after{width: 3px;}
+
+.btn span.span3{bottom: 0;}
+.btn span.span3::before{
+    content: "";
+    float: left;
+    width: 20px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+.btn span.span3::after{
+    content: "";
+    float: right;
+    width: 3px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.btn:hover span.span3::before{width: 3px;}
+.btn:hover span.span3::after{width: 20px;}
+
+.box_box{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.box{
+    width: 200%;
+    height: 500px;
+    border-radius: 50%;
+    /* background-color: red; */
+    transform: translateX(-25%);
+}
 
 
 .scrolldown{
@@ -158,24 +206,74 @@ header nav{
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    animation: scroll 1s infinite ease-out;
+    animation: scroll 1.5s infinite ease;
     z-index: 100;
 }
 
 @keyframes scroll{
-    0%{bottom: 30px;}
-    50%{bottom: 50px;}
-    100%{bottom: 30px;}
+    0%{bottom: 40px;}
+    50%{bottom: 55px;}
+    100%{bottom: 40px;}
+}
+
+
+.hoverMenu{
+    z-index: 9000;
+    width: 300px; height: 100vh; 
+    position: fixed; top: 0; right: -300px;
+    /* background: url("../images/logo_ori.svg") no-repeat 20px 850px ; */
+    background-color: #000000c9;
+}
+.xButton{margin: 20px;}
+.xButton svg{width: 20px; height: 20px;}
+
+.hoverMenu nav{margin: 50px auto; width: 200px;
+    /* border: 1px solid #fff; */
+}
+
+.hoverMenuMain{}
+.hoverMenuMain>li{width: 200px;}
+.hoverMenuMain>li>a{
+    display: block;
+    height: 60px; line-height: 60px;
+    text-align: center;
+    font-size: 1.3rem;
+    transition: all 0.5s;
+    font-weight: 900;
+}
+    
+.hoverMenuMain>li:hover>a{
+    color: #f96;
+    /* background: #000000c0; */
+}
+
+.hoverSub{display: none;}
+.hoverSub li a{
+    font-weight: 100;
+    font-size: 15px;
+    display: block;
+    height: 30px; line-height: 30px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.hoverSub li a:hover{
+    color: #f96;
+    border-bottom: 1px solid #f96;
+    /* background-color: #000000c0; */
 }
 
 
 
-#wrap{}
+
+
+#wrap{margin: 0 auto;}
 .wrap_inner section{
     width: 100%;
     height: 100vh;
     position: relative;
     background-size: cover;
+    text-align: center;
 }
 
 /* .section01{background: url("../images/main01.jpg") no-repeat center;}
@@ -196,14 +294,14 @@ header nav{
 }
 
 .section01_inner h2{
-    font-size: 40px; 
+    font-size: 2.1rem; 
     text-transform: uppercase;
     margin: 10px 0;
     font-weight: 800;
 }
 .section01_inner p{
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 400;
 }
 .section01_inner a{
@@ -212,7 +310,7 @@ header nav{
     color: #fff;
     line-height: 50px;
     text-align: center;
-    font-size: 17px;
+    font-size: 1.1rem;
     border-radius: 50px;
     margin: 50px auto;
     transition: all 0.3s ease-in;
@@ -287,7 +385,6 @@ header nav{
 
 .section02_inner ul li:hover img{
     top: 33%; 
-/* 그라데이션 원 png로 제작해서 백그라운드로 넣기 */
 }
 .section02_inner ul li:hover span{
     color: #f93;
@@ -332,8 +429,7 @@ header nav{
     justify-content: space-between;
     align-items: center;
 }
-.portfolio_title ul li{
-}
+.portfolio_title ul li{}
 
 .portfolio_title ul li a{
     padding: 15px 40px;
@@ -342,16 +438,22 @@ header nav{
     color: #000;
     transition: all 0.3s;
 }
+.portfolio_title ul li:first-child a{ 
+    background-color: #1c3899;
+    color: #fff;
+}
 .portfolio_title ul li:hover a{
     background-color: #1c3899;
     color: #fff;
 }
 
+
 .portfolio_outer{
     position: relative;
-    /* border: 1px solid red; */
-    
-}
+    /* overflow: hidden; */
+    height: 850px;
+    height: auto;
+    /* border: 1px solid red; */}
 
 .portfolio_outer > div{
     /* border: 1px solid yellow; */
@@ -359,9 +461,7 @@ header nav{
     width: 100%; height: auto;
 }
 
-.portfolio_tree{
-
-}
+.portfolio_tree{}
 
 .p_tree_box{
     width: 100%; height: 100%;
@@ -371,11 +471,7 @@ header nav{
     /* border: 1px solid red; */
 }
 
-.bluebox{
-    width: 55%; height: 600px;
-    float: left;
-}
-
+.bluebox{width: 55%; height: 600px; float: left;}
 
 .p_tree_box .p_tree_img1{
     width: 100%; height: 100%;
@@ -402,7 +498,6 @@ header nav{
     background-position: right bottom;
 }
 .p_tree_box .bluebox_arrow{}
-
 
 .portfolio_inner_text{
     float: right;
@@ -594,7 +689,9 @@ header nav{
     background-position: right;
 }
 
-
+/* ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////// */
 .section04{
     width: 100vw; height: 90vh;
     /* border: 3px solid forestgreen; */
@@ -608,22 +705,10 @@ header nav{
 }
 .sec4box {
     flex: 1;
-    height: 100vh;
     border-right: 1px solid #dddddd31;
-    /* filter: grayscale(0.8); */
     overflow: hidden; 
     transition: all 0.5s;
     background-color: rgba(73, 73, 73, 0.452);
-    
-}
-
-
-.sec4box:hover {
-    filter: grayscale(0);
-    flex: 1.5;
-    background-color: rgba(155, 79, 4, 0.582);
-}
-.sec4box {
     width: 100%; height: 100%;
     display: flex;
     align-items: center;
@@ -631,6 +716,11 @@ header nav{
     flex-direction: column;
 }
 
+.sec4box:hover {
+    filter: grayscale(0);
+    flex: 1.5;
+    background-color: rgba(155, 79, 4, 0.582);
+}
 
 .sec4box h2, .sec4box p{
     text-align: center;
@@ -699,7 +789,7 @@ header nav{
     color: #555;
     border-radius: 20px;
     margin: 10px;
-    width: 300px;
+    max-width: 300px;
 }
 
 .con1{
@@ -712,7 +802,7 @@ header nav{
 .con2{height: 100%; display: flex;}
 
 .con2 textarea{
-    height: 280px;  width: 500px;
+    height: 280px; width: 500px; max-width: 500px; 
     border: none;
     background-color: #f5f6fa;
     padding: 20px;

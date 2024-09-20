@@ -224,7 +224,8 @@ header nav{
     /* background: url("../images/logo_ori.svg") no-repeat 20px 850px ; */
     background-color: #000000c9;
 }
-.xButton{margin: 20px;}
+.xButton{margin: 20px; cursor: pointer; transition: all 0.3s; width: 19px; height: 23px;}
+.xButton:hover{transform: rotate(180deg);}
 .xButton svg{width: 20px; height: 20px;}
 
 .hoverMenu nav{margin: 50px auto; width: 200px;
@@ -363,7 +364,7 @@ header nav{
 
 }
 .section02_inner ul{
-    width: 70%;
+    width: 70%; height: 320px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -429,7 +430,9 @@ header nav{
     justify-content: space-between;
     align-items: center;
 }
-.portfolio_title ul li{}
+    .portfolio_title ul li{
+    text-wrap: nowrap;
+    }
 
 .portfolio_title ul li a{
     padding: 15px 40px;
@@ -761,10 +764,11 @@ header nav{
     /* border: 1px solid blue; */
     margin-left: 100px;
     line-height: 2;
+    text-wrap: nowrap;
 }
 
 .con_top_left .checkbox{}
-.con_top_left p{font-size: 14px;}
+.con_top_left p{font-size: 1rem;}
 .con_top_left p:nth-child(2){font-weight: 700;}
 .con_top_left p:nth-child(3){}
 
@@ -789,7 +793,7 @@ header nav{
     color: #555;
     border-radius: 20px;
     margin: 10px;
-    max-width: 300px;
+    width: 300px;
 }
 
 .con1{
@@ -824,13 +828,13 @@ header nav{
     display: flex; justify-content: space-between; align-items: center;
 }
 .con_bottom_left{
-    margin: 150px 0 0 100px;
+    margin: 150px 0 50px 100px;
     /* border: 1px solid red; */
 
 }
 .con_bottom_left .intro{
     font-weight: 800;
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 
 .con_bottom_left .intro p{
@@ -839,7 +843,7 @@ header nav{
 
 .con_bottom_left .info{
     color: #999;
-    font-size: 14px;
+    font-size: 0.8rem;
     margin: 30px 0;
 
 }
@@ -849,32 +853,26 @@ header nav{
 }
 
 .con_bottom_right{
-    margin: 80px 100px 0 0;
+    margin: 80px 100px 50px 0;
     /* border: 1px solid blue; */
     text-align: right;
 }
 .con_bottom_right .mail{
     font-weight: 800;
-    font-size: 30px;
+    font-size: 2rem;
 }
 .con_bottom_right .telNum{
     font-weight: 800;
-    font-size: 36px;
+    font-size: 2.3rem;
     margin: 30px 0;
 }
-.con_bottom_right .time{
-    font-size: 14px;
-}
+.con_bottom_right .time{font-size: 0.9rem;}
 
 .con_bottom_right .topbutton{
     width: 64px; height: 65px;
     margin: 15px 0 0 auto;
-    transition: all 0.2s;
-    box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 3px #ccc;
 }
-.con_bottom_right .topbutton a{
-    transition: all 0.3s;
-}
-.con_bottom_right .topbutton:hover img{
-    box-shadow: 0 0 2px #ddd;
-}
+
+.con_bottom_right .topbutton img{transition: all 0.2s;}
+.con_bottom_right .topbutton:hover img{box-shadow: 0 0 2px #aaa;}

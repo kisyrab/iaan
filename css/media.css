@@ -12,11 +12,10 @@
     .section01_inner a{font-size: 0.9rem; margin: 50px auto;}
 /* ////// */
     .section02_inner ul{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        flex-wrap: wrap;
         width: 60%;
         margin: 80px auto;
+        align-content: space-between;
     }
     .section02_inner ul li{text-align: center; margin: 0 auto;}
 /* ////// */
@@ -70,9 +69,7 @@
     }
 
 
-    .section04{
-        flex-direction: column;
-    }
+    .section04{flex-direction: column;}
     .sec4icon{display: none;}
 
     .sec4box{
@@ -84,18 +81,47 @@
 
     .sec4box h2, .sec4box p{padding: 0;}
 
+    .footer h2{
+        text-align: center;
+        margin: 50px auto; 
+    }
     .con_top{display: block;}
     .con_top_left{
-        width: 500px;
+        width: 460px;
+        margin: 5px auto;
+        padding-left: 30px;
+        /* border: 1px solid red; */
+    }
+    .con_top_right{margin: 10px auto;}
+    .con_form{
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+    .con_form input{
+        width: 400px;
+        padding: 15px;
+        margin: 5px auto;
+    }
+    .con1{margin: 5px 0;}
+    .con2 textarea{
+        width: 400px; height: 150px;
+        padding: 15px;
     }
 
+    .con3 input{height: 50px; margin-top: 10px;}
+    .con_bottom_left{margin: 80px 0 50px 100px;}
+    .con_bottom_left .intro{font-size: 12px;}
+    .con_bottom_left .info{font-size: 12px;}
+
+    .con_bottom_right .mail{font-size: 1.5rem;}
+    .con_bottom_right .telNum{font-size: 1.0rem;}
+    .con_bottom_right .time{font-size: 0.7rem;}
 
 
 
 
-
-
-} 
+} /*  (max-width : 700px) */
 
 
 

@@ -8,11 +8,10 @@ header{
     position: absolute;
     z-index: 900;
     height: 100px;
+    /* border: 1px solid red; */
     cursor: pointer;
 }
-header:hover{
-    background-color: #00000067;
-}
+header.bgON{background-color: #00000067;}
 header h1{}
 header h1 a{
     background: url("../images/logo.svg") no-repeat center;
@@ -28,6 +27,7 @@ header nav{
     width: 50%;
     height: 100px;
     position: relative;
+    /* border: 1px solid blue; */
     z-index: 101;
 }
 
@@ -36,9 +36,11 @@ header nav{
     justify-content: space-around;
     align-items: center;
     width: 100%; height: 100px;
+    /* border: 1px solid red; */
 }
 .main>li{
     position: relative;
+    /* border: 1px solid red; */
 }
 
 .main>li>a{
@@ -47,12 +49,10 @@ header nav{
     font-size: 1.1rem;
     letter-spacing: 1px;
     position: relative;
+    /* border: 1px solid red; */
     padding: 0 20px;
 }
-.main>li:hover>a{
-    color: #fff;
-}
-
+.main>li:hover>a{color: #fff;}
 
 .main>li>a:before{
     content: "";
@@ -65,10 +65,7 @@ header nav{
     background-color: #f93;
 }
 
-.main>li:hover>a:before{
-    transform: scale(1);
-}
-
+.main>li:hover>a:before{transform: scale(1);}
 
 .sub{
     position: absolute;
@@ -76,11 +73,14 @@ header nav{
     transform: translateX(-50%);
     width: 150%;
     height: 210px;
+    /* border: 1px solid red; */
     display: none;
+    /* z-index: 3000; */
 }
 .sub li{margin: 10px 0;}
 
 .sub li a{
+    /* border: 1px solid red; */
     text-align: center;
     margin: 15px 0;
     letter-spacing: 1px;
@@ -91,22 +91,260 @@ header nav{
     font-weight: 500;
 }
 
-
 #indicator
 {   /* display: none; */
     position: absolute;
     left: 5%;
     bottom: 20px;
+    /* width: calc((100% / 4) - 5%); */
     width: 0%;
     height: 2px;
     background-color: #f93;
     border-radius: 5px;
     transition: 0.2s ease left;
     z-index: 300;
-    
 }
 
-.gnb{}
-.gnb a{width: 80%;}
-.gnb a img{width: 80%;}
-.gnb a:hover img{filter: hue-rotate(180deg);}
+.gnb{
+    /* border: 1px solid red; */
+    width: 100px; height: 100px; text-align: center;
+    display: flex; justify-content: space-between; align-items: center;
+    overflow: hidden;
+
+}
+.gnb a{}
+.gnb a svg{width: 30px; height: 30px; margin-top: 3px;}
+
+.btn{
+    width: 30px; 
+    height: 30px;
+    /* border :1px solid yellow; */
+    position: relative;    
+}
+
+.btn span{
+    display: block;
+    width: 30px; height: 3px;
+    background-color: transparent;
+    position: absolute;
+}
+
+.btn span.span1{top: 0; transition: all 0.3s ease-in-out;}
+
+.btn span.span1::before{
+    content: "";
+    float: left;
+    width: 20px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn span.span1::after{
+    content: "";
+    float: right;
+    width: 3px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);}
+
+.btn:hover span.span1::before{width: 3px;}
+.btn:hover span.span1::after{width: 20px;}
+.btn span.span2{top: 50%; transform: translateY(-50%);}
+.btn span.span2::before{
+    content: "";
+    float: left;
+    width: 3px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.btn span.span2::after{
+    content: "";
+    float: right;
+    width: 20px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn:hover span.span2::before{width: 20px;}
+.btn:hover span.span2::after{width: 3px;}
+
+.btn span.span3{bottom: 0;}
+.btn span.span3::before{
+    content: "";
+    float: left;
+    width: 20px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+.btn span.span3::after{
+    content: "";
+    float: right;
+    width: 3px; height: 3px;
+    background-color: #fff;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.btn:hover span.span3::before{width: 3px;}
+.btn:hover span.span3::after{width: 20px;}
+
+.box_box{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.box{
+    width: 200%;
+    height: 500px;
+    border-radius: 50%;
+    /* background-color: red; */
+    transform: translateX(-25%);
+}
+
+
+.hoverMenu{
+    z-index: 9000;
+    width: 300px; height: 100vh; 
+    position: fixed; top: 0; right: -300px;
+    /* background: url("../images/logo_ori.svg") no-repeat 20px 850px ; */
+    background-color: #000000c9;
+}
+.xButton{margin: 20px; cursor: pointer; transition: all 0.3s; width: 19px; height: 23px;}
+.xButton:hover{transform: rotate(180deg);}
+.xButton svg{width: 20px; height: 20px;}
+
+.hoverMenu nav{margin: 50px auto; width: 200px;
+    /* border: 1px solid #fff; */
+}
+
+.hoverMenuMain{}
+.hoverMenuMain>li{width: 200px;}
+.hoverMenuMain>li>a{
+    display: block;
+    height: 60px; line-height: 60px;
+    text-align: center;
+    font-size: 1.3rem;
+    transition: all 0.5s;
+    font-weight: 900;
+}
+    
+.hoverMenuMain>li:hover>a{
+    color: #f96;
+    /* background: #000000c0; */
+}
+
+.hoverSub{display: none;}
+.hoverSub li a{
+    font-weight: 100;
+    font-size: 15px;
+    display: block;
+    height: 30px; line-height: 30px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.hoverSub li a:hover{
+    color: #f96;
+    border-bottom: 1px solid #f96;
+    /* background-color: #000000c0; */
+}
+
+
+.mainBG{
+    width: 100%; max-width: 100%; height: 600px;
+    background: url("../images/company/Curves_1.jpg") no-repeat center / cover;
+    position: relative;
+}
+
+.menu{
+    width: 1400px; height: 50px; margin: 0 auto;
+}
+.menuTxt{position: absolute; top: 250px;}
+.menuTxt h4{font-weight: 100; margin-bottom: 55px; letter-spacing: 1px; font-size: 1.4rem;}
+.menuTxt h1{font-size: 3.2rem; letter-spacing: 4px;}
+
+.menuBar{
+    width: 80%; max-width: 625px; height: 30px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: absolute;
+    top: 550px; left: 250px;
+}
+.underArrow{padding-left: 50px;}
+
+.section01{
+    overflow: hidden;
+    color: #444;
+    width: 100%; max-width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.section01::after{
+    content: "IAAN";
+    font-size: 40vw;
+    font-weight: 900;
+    position: absolute;
+    height: 100%;
+    left: 50%; bottom: -5%; transform: translateX(-50%);
+    color: transparent;
+    -webkit-text-stroke: 1px #dddddd9f;
+    font-family: "arial";
+    z-index: -2;
+}
+.s1Inner{width: 100%; max-width: 1400px; height: auto; margin: 0 auto;}
+.s1MainText{}
+.s1MainText .s1Title{margin: 150px 0; font-size: 3rem; font-weight: 600;}
+.s1MainText .s1SubTitle{margin: 75px 0; font-size: 2rem; font-weight: 500; color: #666;}
+.s1MainText .s1text01{line-height: 1.5; color: #666; font-weight: 200;}
+.Bold{font-size: 2rem; font-weight: 700;}
+.Orange{color: rgb(255, 117, 48);}
+
+.s1Graphic{}
+.s1Graphic .wave{position: absolute; top: 55%; left: 40%;}
+.s1Graphic .s1text02{position: absolute; top: 75%; left: 20%;}
+.s1Graphic .s1text03{position: absolute; top: 60%; right: 13%;}
+
+.section02{width: 100vw; height: auto; background-color: #f5f5f5; }
+
+.section02 .s2Inner{
+    width: 100%; max-width: 1400px; height: auto;
+    margin: 0 auto;
+    color: #333;
+}
+.s2Inner .s2Title{padding: 150px 0; font-size: 2rem;}
+
+.s2Box{
+    display: flex; justify-content: space-between; align-items: center;
+    line-height: 1.5; padding-bottom: 60px;
+}
+
+.s2Box .s2text{font-weight: 100; font-size: 1.5rem;}
+.s2Box .s2text .s2Bold{font-size: 2rem;}
+.s2Box .s2P{color: #666; margin-top: 30px; line-height: normal; font-size: 1.1rem;}
+.s2Box02 .s2text2-2{margin-right: 20px;}
+.s2Box03 .s2text3-1 .s2Orange{font-size: 2rem; font-weight: 700;}
+.s2Box03 .s2text3-1 .s2Bold{font-size: 2rem; font-weight: 700; color: #333;}
+
+
+.con_bottom{
+    display: flex; justify-content: space-between; align-items: center;
+    color: #333;
+}
+.con_bottom_left{margin: 150px 0 50px 100px;}
+.con_bottom_left .intro{ font-weight: 800; font-size: 0.8rem;}
+
+.con_bottom_left .intro p{margin-top: 10px;}
+
+.con_bottom_left .info{color: #999; font-size: 0.8rem; margin: 30px 0;}
+.con_bottom_left .copy{font-weight: 800; font-size: 14px;}
+
+.con_bottom_right{margin: 80px 100px 50px 0; text-align: right; color: #333;}
+.con_bottom_right .mail{ font-weight: 800; font-size: 2rem;}
+.con_bottom_right .telNum{font-weight: 800; font-size: 2.3rem; margin: 30px 0;}
+.con_bottom_right .time{font-size: 0.9rem;}
+
+.con_bottom_right .top_button{ 
+    width: 64px; height: 65px; margin: 15px 0 0 auto; box-shadow: 0 0 3px #ccc; 
+    position: relative; z-index: 10000;
+}
+
+.con_bottom_right .top_button img{transition: all 0.2s;}
+.con_bottom_right .top_button:hover img{box-shadow: 0 0 2px #aaa;}

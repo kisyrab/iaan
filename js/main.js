@@ -121,9 +121,9 @@ $(function(){
 
     //top버튼
     
-    $(".topbutton a").click(function(){
-        
+    $(".topbutton a").click(function(){        
         $("html, body").animate({scrollTop : 0},500)
+        console.log("aslkdjf")
 
     })
 
@@ -143,5 +143,7 @@ $(function(){
     },function(){
         $(this).find(".hoverSub").stop().slideUp()
     })
+
+
 
 })//j

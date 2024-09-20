@@ -1,0 +1,20 @@
+@charset "utf-8";
+@media (max-width : 700px) {
+    html,body{font-size: 12px;}
+    .main{display: none;}
+
+    header{padding: 0 20px;}
+    .mainBG{padding: 0 50px;}
+    .menuTxt{text-align: center; left: 50%; transform: translateX(-50%);}
+    .menuBar{left: 50px; justify-content: space-around;}
+
+    .section01::after{display: none;}
+    .s1MainText{padding: 0 50px; text-align: center;}
+    .s1MainText .s1Title{margin: 150px 0 50px 0;}
+    .s1MainText .s1SubTitle{margin: 20px 0;}
+    .s1Graphic{}
+    .s1Graphic .wave{width: 80%; left: 10%; bottom: 0;}
+    .s1Graphic .s1text02{font-size: 1.4rem; text-align: center; left: 20%; border: 1px solid red;}
+    .s1Graphic .s1text03{
+        font-size: 1.4rem; text-align: center; right: 20%; bottom: 5%;border: 1px solid blue;}
+}
